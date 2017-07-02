@@ -4,6 +4,7 @@ const mapTodos = (state, id, prop) => ({
   )
 })
 
+let counter = 0
 
 export default {
   add: state => ({
@@ -12,7 +13,7 @@ export default {
       completed: false,
       editing: false,
       value: state.input,
-      id: state.todos.length + 1
+      id: ++counter
     })
   }),
 
